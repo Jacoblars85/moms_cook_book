@@ -26,7 +26,7 @@ CREATE TABLE "user" (
 
 Go to the `database.sql` file and copy and paste everything into SQL
 
-If you would like to name your database something else, you will need to change `auth_react_starter` to the name of your new database name in `server/modules/pool.js`.
+If you would like to name your database something else, you will need to change `moms_cookbook` to the name of your new database name in `server/modules/pool.js`.
 
 ## Development Setup Instructions
 

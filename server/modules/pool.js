@@ -28,7 +28,7 @@ else {
     pool = new pg.Pool({
         host: 'localhost',
         port: 5432,
-        database: 'auth_react_starter',   // 	💥 Change this to the name of your database!
+        database: 'moms_cookbook',   // 	💥 Change this to the name of your database!
     });
 }
 
