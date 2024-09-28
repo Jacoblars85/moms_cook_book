@@ -13,7 +13,7 @@ function Nav(props) {
   return (
     <div className="nav">
       <Link to="/home">
-        <h2 className="nav-title">Auth React Starter</h2>
+        <h2 className="nav-title">Mom's Cookbook</h2>
       </Link>
       {/* If no user is logged in, show these links */}
       {!user.id && (
