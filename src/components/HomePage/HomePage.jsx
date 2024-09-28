@@ -14,7 +14,7 @@ function HomePage() {
     <div>
       <Nav />
 
-      <h1>Welcome to Auth React</h1>
+      <h1>Welcome to Mom's Cookbook</h1>
     </div>
   );
 }
