@@ -8,7 +8,7 @@ function LoginPage() {
   return (
       <div>
 
-          <h1>Auth React Starter</h1>
+          <h1>Mom's Cookbook</h1>
 
         <LoginForm />
 
