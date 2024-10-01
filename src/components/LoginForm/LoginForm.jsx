@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import {useSelector} from 'react-redux';
-import TextField from '@mui/material/TextField';
+import { Box, Button, TextField, Typography } from '@mui/material';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function LoginForm() {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const errors = useSelector(store => store.errors);
+  const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const login = (event) => {
     event.preventDefault();
 
-    if (username && password) {
+    if (email && password) {
       dispatch({
         type: 'LOGIN',
         payload: {
-          username: username,
+          email: email,
           password: password,
         },
       });
@@ -26,47 +27,79 @@ function LoginForm() {
   }; // end login
 
   return (
-    <form className="formPanel" onSubmit={login}>
-          <h2 style={{ margin: "5px", fontSize: "35px", textShadow: "2px 2px 2px gray"}}>Login</h2>
-          <div style={{ height: "25px", width: "100%"}}>
-      {errors.loginMessage && (
-        <h3 className="alert" role="alert">
-          {errors.loginMessage}
-        </h3>
-      )}
-</div>
-      <div>
-        <label htmlFor="username">
-          <TextField
-          margin="dense"
-          variant="standard"
-            type="text"
-            name="username"
-            label="username"
-            required
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-          />
-        </label>
-      </div>
-      <div>
-        <label htmlFor="password">
-          <TextField
-          margin="dense"
-          variant="standard"
-            type="password"
-            name="password"
-            label="password"
-            required
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
-        </label>
-      </div>
-      <div>
-        <input className="btn" type="submit" name="submit" value="Log In" />
-      </div>
-    </form>
+    <>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '30px',
+        }}
+      >
+        <Typography variant="h4">Login</Typography>
+        <form onSubmit={login}>
+          {errors.loginMessage && (
+            <h3 className="alert" role="alert">
+              {errors.loginMessage}
+            </h3>
+          )}
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              paddingTop: 1,
+            }}
+          >
+            <TextField
+              sx={{
+                marginBottom: 1,
+              }}
+              id="email"
+              type="text"
+              label="E-mail"
+              variant="outlined"
+              value={email}
+              required
+              onChange={(event) => setEmail(event.target.value)}
+            />
+            <TextField
+              sx={{
+                marginBottom: 2,
+              }}
+              id="password"
+              type="password"
+              label="Password"
+              variant="outlined"
+              value={password}
+              required
+              onChange={(event) => setPassword(event.target.value)}
+            />
+            <Button
+              sx={{ mb: 4 }}
+              onClick={login}
+              variant="contained"
+              type="submit"
+            >
+              Log in
+            </Button>
+          </Box>
+        </form>
+        <Box>
+          <Typography variant="body1" align="center">
+            New User?
+          </Typography>
+          <Button
+            align="center"
+            onClick={() => {
+              history.push('/registration');
+            }}
+          >
+            Register
+          </Button>
+        </Box>
+      </Box>
+    </>
   );
 }
 
