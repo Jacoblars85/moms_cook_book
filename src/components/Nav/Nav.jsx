@@ -32,7 +32,7 @@ function Nav(props) {
             justifyContent: "center",
           }}
         >
-          <h2>{user.username}</h2>
+          <h2>{user.name}</h2>
           <LogOutButton />
         </Box>
       )}
