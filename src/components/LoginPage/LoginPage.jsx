@@ -6,16 +6,13 @@ function LoginPage() {
   const history = useHistory();
 
   return (
-      <div>
-<center>
-          <h1>Mom's Cookbook</h1>
+    <div>
+      <center>
+        <h1>Mom's Cookbook</h1>
 
         <LoginForm />
-
-        
-
-        </center>
-      </div>
+      </center>
+    </div>
   );
 }
 
