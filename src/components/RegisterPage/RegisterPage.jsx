@@ -9,12 +9,9 @@ function RegisterPage() {
   return (
     <div>
       <center>
-      <h1>Mom's Cookbook</h1>
+        <h1>Mom's Cookbook</h1>
 
-      <RegisterForm />
-
-      
-
+        <RegisterForm />
       </center>
     </div>
   );
