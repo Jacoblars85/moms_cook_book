@@ -9,8 +9,6 @@ function RegisterPage() {
   return (
     <div>
       <center>
-        <h1>Mom's Cookbook</h1>
-
         <RegisterForm />
       </center>
     </div>
