@@ -12,8 +12,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function RegisterForm() {
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
+  const [username, setName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmedPassword, setConfirmedPassword] = useState('');
   const errors = useSelector((store) => store.errors);
@@ -30,10 +30,10 @@ function RegisterForm() {
     ) {
       dispatch({ type: 'REGISTRATION_FAILED_PASSWORDS_DONT_MATCH' });
     } else if (
-      email === '' ||
-      name === '' ||
-      email === null ||
-      name === null 
+      // email === '' ||
+      username === '' ||
+      // email === null ||
+      username === null 
     ) {
       dispatch({ type: 'REGISTRATION_FAILED' });
     } else {
@@ -41,8 +41,8 @@ function RegisterForm() {
       dispatch({
         type: 'REGISTER',
         payload: {
-          email: email,
-          name: name,
+          // email: email,
+          username: username,
           password: password,
         },
       });
@@ -95,7 +95,7 @@ function RegisterForm() {
               alignItems: 'center',
             }}
           ></Box>
-          <TextField
+          {/* <TextField
             id="email"
             type="text"
             label="E-mail"
@@ -103,13 +103,13 @@ function RegisterForm() {
             value={email}
             required
             onChange={(event) => setEmail(event.target.value)}
-          />
+          /> */}
           <TextField
             id="name"
             type="text"
             label="Full Name"
             variant="outlined"
-            value={name}
+            value={username}
             required
             onChange={(event) => setName(event.target.value)}
           />
