@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function LoginForm() {
-  const [email, setEmail] = useState('');
+  const [username, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
@@ -13,11 +13,12 @@ function LoginForm() {
   const login = (event) => {
     event.preventDefault();
 
-    if (email && password) {
+    if (username && password) {
+      
       dispatch({
         type: 'LOGIN',
         payload: {
-          email: email,
+          username: username,
           password: password,
         },
       });
@@ -57,9 +58,9 @@ function LoginForm() {
               }}
               id="email"
               type="text"
-              label="E-mail"
+              label="E-username"
               variant="outlined"
-              value={email}
+              value={username}
               required
               onChange={(event) => setEmail(event.target.value)}
             />
