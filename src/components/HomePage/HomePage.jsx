@@ -18,7 +18,7 @@ function HomePage() {
 
       <button onClick={() => history.push(`/my-recipes`)}>My Recipes</button>
       <button onClick={() => history.push(`/browse-recipes`)}>Browse Recipes</button>
-      <button onClick={() => history.push(`/account`)}>Account</button>
+      <button onClick={() => history.push(`/myAccountPage`)}>Account</button>
 
     </div>
   );
