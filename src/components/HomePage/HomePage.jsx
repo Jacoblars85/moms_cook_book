@@ -16,9 +16,9 @@ function HomePage() {
 
       <h1>Welcome to Mom's Cookbook</h1>
 
-      <button>My Recipes</button>
-      <button>Account</button>
-      <button>Browse Recipes</button>
+      <button onClick={() => history.push(`/my-recipes`)}>My Recipes</button>
+      <button onClick={() => history.push(`/browse-recipes`)}>Browse Recipes</button>
+      <button onClick={() => history.push(`/account`)}>Account</button>
 
     </div>
   );
