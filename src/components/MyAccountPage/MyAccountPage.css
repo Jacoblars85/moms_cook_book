@@ -1,0 +1,63 @@
+.myAccountPageCss {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 30px;
+  }
+  
+  .accountPageFormArea {
+    height: auto;
+    width: 500px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+  
+  .accountPageFormArea section {
+    font-size: 28px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    column-gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 35%;
+  }
+  
+  .accountPageFormArea p {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .accountPageForm p {
+    font-size: 13.5px;
+    margin: 0px;
+    margin-bottom: -22.5px;
+    color: #d3302f;
+  }
+  
+  /* .editInfoButton {
+    margin-top: 3;
+  } */
+  
+  .invalidHeader {
+    padding: 0px;
+    margin: 0px;
+    margin-top: -9%;
+    margin-bottom: -7.3%;
+    color: #d3302f;
+  }
