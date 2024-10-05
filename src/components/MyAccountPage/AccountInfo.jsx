@@ -18,17 +18,17 @@ import {
             <TableBody>
               <TableRow>
                 <TableCell>Name:</TableCell>
-                <TableCell>{currentUser.name}</TableCell>
+                {/* <TableCell>{currentUser.name}</TableCell> */}
               </TableRow>
   
               <TableRow>
                 <TableCell>Email:</TableCell>
-                <TableCell>{profileUser.email}</TableCell>
+                {/* <TableCell>{profileUser.email}</TableCell> */}
               </TableRow>
   
               <TableRow>
                 <TableCell>Company:</TableCell>
-                <TableCell>{profileUser.company_name}</TableCell>
+                {/* <TableCell>{profileUser.company_name}</TableCell> */}
               </TableRow>
             </TableBody>
           </Table>
