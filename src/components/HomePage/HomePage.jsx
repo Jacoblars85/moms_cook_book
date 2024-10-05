@@ -15,6 +15,11 @@ function HomePage() {
       <Nav />
 
       <h1>Welcome to Mom's Cookbook</h1>
+
+      <button>My Recipes</button>
+      <button>Account</button>
+      <button>Browse Recipes</button>
+
     </div>
   );
 }
