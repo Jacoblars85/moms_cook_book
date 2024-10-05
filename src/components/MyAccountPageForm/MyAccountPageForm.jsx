@@ -148,7 +148,7 @@ export default function MyAccountPageForm({ setIsForm }) {
             variant="outlined"
             type="text"
             name="name"
-            // placeholder={profileUser.name}
+            placeholder={profileUser.name}
             value={userName}
             onChange={(e) => handleNameChange(e.target.value)}
             required
@@ -170,7 +170,7 @@ export default function MyAccountPageForm({ setIsForm }) {
             variant="outlined"
             type="email"
             name="email"
-            // placeholder={profileUser.email}
+            placeholder={profileUser.email}
             value={userEmail}
             onChange={(e) => handleEmailChange(e.target.value)}
             color={userEmail === '' ? 'error' : undefined}
