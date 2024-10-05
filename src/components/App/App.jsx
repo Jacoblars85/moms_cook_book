@@ -11,6 +11,7 @@ import HomePage from '../HomePage/HomePage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import MyAccountPage from '../MyAccountPage/MyAccountPage';
 import './App.css';
 
 function App() {
@@ -53,6 +54,13 @@ function App() {
             path="/home"
           >
             <HomePage />
+          </ProtectedRoute>
+
+
+
+
+          <ProtectedRoute exact path="/myAccountPage">
+            <MyAccountPage />
           </ProtectedRoute>
 
 
